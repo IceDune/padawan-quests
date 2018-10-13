@@ -52,7 +52,7 @@ let urlValue;
 globalLanguage.addEventListener("change", () => {
   pageNumber = 0;
   selectedLanguage = globalLanguage.value;
-  urlValue = `${baseURL}/search/issues?q=+language:${selectedLanguage}+label=up for grabs+state=open&order=desc&page=1&`;
+  urlValue = `${baseURL}/search/issues?q=+language:${selectedLanguage}+label=up for grabs+state=open&order=desc&page=1`;
 
   dataFetcher(urlValue);
 });
