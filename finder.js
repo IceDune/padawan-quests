@@ -50,30 +50,41 @@ let pageNumber = 1;
 let urlValue;
 
 globalLanguage.addEventListener("change", () => {
+  pageNumber = 0;
   selectedLanguage = globalLanguage.value;
-  urlValue = `${baseURL}/search/issues?q= +language:${selectedLanguage}+label=up for grabs+state=open&order=desc`;
+  urlValue = `${baseURL}/search/issues?q=+language:${selectedLanguage}+label=up for grabs+state=open&order=desc&page=1&`;
 
   dataFetcher(urlValue);
 });
 
 searchButton.addEventListener("click", () => {
+  pageNumber = 1;
   selectedLanguage = filteredLanguage.value;
   let labelValue = label.value;
   let searchValue = searchInputText.value;
-  urlValue = `${baseURL}/search/issues?q=${searchValue ? searchValue : ' ' }+language:${selectedLanguage ? selectedLanguage : ' ' }+label=${labelValue}+state=open&order=desc`;
+  urlValue = `${baseURL}/search/issues?q=${searchValue ? searchValue : ' ' }+language:${selectedLanguage ? selectedLanguage : ' ' }+label=${labelValue}+state=open&order=desc&page=1`;
 
   dataFetcher(urlValue);
 });
 
-/* nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
+  if(pageNumber + 1 <= 0) {
+    return;
+  }
   pageNumber++;
-  urlValue += `?page=${pageNumber}`;
+  urlValue = urlValue.slice(0, urlValue.lastIndexOf('=') + 1);
+  urlValue += pageNumber;
+
   dataFetcher(urlValue);
 });
 
 prevBtn.addEventListener("click", () => {
-  pageNumber--;
-  urlValue += `?page=${pageNumber}`;
+  if(pageNumber - 1 <= 0) {
+    return;
+  }
+  pageNumber--; 
+  urlValue = urlValue.slice(0, urlValue.lastIndexOf('=') + 1);
+  urlValue += pageNumber;
+  
   dataFetcher(urlValue);
 });
- */
