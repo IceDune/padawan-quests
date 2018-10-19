@@ -103,3 +103,15 @@ prevBtn.addEventListener("click", () => {
 
   dataFetcher(urlValue);
 });
+
+window.addEventListener("scroll", function() {
+  if(this.scrollY > 10) {
+    document.querySelector('header').classList.add('nav-scrolled');
+    document.querySelector('#nav-title').classList.add('heading-scrolled');
+    document.querySelector('#nav-language').classList.add('heading-scrolled');
+  } else {
+    document.querySelector('header').classList.remove('nav-scrolled');
+    document.querySelector('#nav-title').classList.remove('heading-scrolled');
+    document.querySelector('#nav-language').classList.remove('heading-scrolled');
+  }
+});
