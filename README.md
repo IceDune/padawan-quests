@@ -5,4 +5,4 @@ A github issue finder.
 
 1. download the electron-app folder.
 2. cd into the folder.
-3. run npm start.
+3. run `npm start`.
