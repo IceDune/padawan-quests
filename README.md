@@ -1,7 +1,7 @@
 # padawan-quests
 A github issue finder.
----
-##Quick Start
+
+## Quick Start
 
 1. download the electron-app folder.
 2. cd into the folder.
