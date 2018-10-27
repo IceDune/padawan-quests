@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Padawan Quests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main>
+
+    <header>
+      <h2 id="nav-title" class="nav-heading">PADAWAN QUESTS</h2>
+      <div>
+        <label id="nav-language" for="language" class="nav-heading">Language</label>
+        <select id="language">
+          <option value="">Select</option>
+          <option value="javascript">Javascript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="ruby">Ruby</option>
+          <option value="php">PHP</option>
+          <option value="c++">C++</option>
+          <option value="css">CSS</option>
+          <option value="c#">C#</option>
+          <option value="c">C</option>
+          <option value="typescript">Typescript</option>
+          <option value="shell">Shell</option>
+          <option value="swift">Swift</option>
+          <option value="objective-c">Objective-C</option>
+        </select>
+      </div>
+    </header>   <!--//padawan quests, quest guild-->
+    
+    <h2 id="title">SEARCH FOR OPEN SOURCE ISSUES TO CONTRIBUTE.</h2>
+
+    <form>
+      <div>
+        <select id="filterLanguage">
+          <option value="">All</option>
+          <option value="javascript">Javascript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="ruby">Ruby</option>
+          <option value="php">PHP</option>
+          <option value="c++">C++</option>
+          <option value="css">CSS</option>
+          <option value="c#">C#</option>
+          <option value="c">C</option>
+          <option value="typescript">Typescript</option>
+          <option value="shell">Shell</option>
+          <option value="swift">Swift</option>
+          <option value="objective-c">Objective-C</option>
+        </select>
+      </div><br>
+
+      <div>
+        <label for="issueLabel">Add a label:</label>
+        <input id="issueLabel" type="text" placeholder="e.g. up for grabs">
+      </div>
+
+      <div>
+        <p><b>Beginners can try-</b> up for grabs, beginner, good first issue</p>
+      </div>
+
+      <div>
+        <input id="searchField" type="text" placeholder="search for repository ">
+        <button id="search" type="button">Search for Issues!</button>
+      </div><br>
+
+    </form>
+
+    <article id="issuesArea">issues come here</article>
+    
+    <div id="pagebuttons">
+      <button type="button" id="previous">Prev</button>
+        <button type="button" id="next">Next</button>
+    </div><br>
+
+    <footer>
+      <div>Made with <span class="fa fa-gratipay"></span> by IceDune</div>
+      <div><a href="https://opensource.guide/">Learn about contributing</a></div>
+      <div><a href="#">View on github</a> <span class="fa fa-github"></span></div>
+    </footer>
+  </main>
+  <script src="./finder.js"></script>
+</body>
+</html>

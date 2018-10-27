@@ -1,0 +1,30 @@
+{
+  "name": "padawan-quests",
+  "version": "1.0.0",
+  "description": "Github issue finder for developers. ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IceDune/padawan-quests.git"
+  },
+  "keywords": [
+    "issues",
+    "github"
+  ],
+  "author": "IceDune",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IceDune/padawan-quests/issues"
+  },
+  "homepage": "https://github.com/IceDune/padawan-quests#readme",
+  "devDependencies": {
+    "electron": "^3.0.6"
+  },
+  "dependencies": {
+    "spin.js": "^4.0.0"
+  }
+}

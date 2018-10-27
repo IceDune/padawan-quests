@@ -1,4 +1,3 @@
-//import { Spinner } from "./node_modules/spin.js";
 
 async function dataFetcher(url) {
   fetchedData = [];
